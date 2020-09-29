@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    loadChildren: () => import('./modules/parameters/parameters-routing.module').then(m => m.ParametersRoutingModule)
+    loadChildren: () => import('./modules/parameters/parameters.module').then(m => m.ParametersModule)
   },
   {
     path: '**',
