@@ -1,10 +1,43 @@
-<nav>
+<!-- <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="brand-logo">Movies</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a routerLink="/home">Coming soon</a></li>
+        <li><a routerLink="/home">Coming soon</a></li>
+        <li><a routerLink="/home">Coming soon</a></li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
+
+  <!-- NAVBAR DE PUBLICATION, ROOM, HOME -->
+
+<nav>
+  <div class="nav-wrapper #757575 blue lighten-2">
+      <a routerLink="/home" class="brand-logo"><i class="material-icons">local_movies</i>MOVIES</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+              <a class="dropdown-trigger" data-target="movieID">
+          CRUDMOVIE<i class="material-icons right">arrow_drop_down</i>
+        </a>
+          </li>
+      </ul>
+
+
+
+
+      <!-- DROPDOWN CONTENT DE MOVIE -->
+
+      <ul id="movieID" class="dropdown-content">
+          <li><a routerLink="/movies/movie-creation">Movie Creation</a></li>
+          <li><a routerLink="/movies/movie-edition">Movie Edition</a></li>
+          <li><a routerLink="/movies/movie-list">Movie List</a></li>
+          <li><a routerLink="/movies/movie-remove">Movie Remove</a></li>
+      </ul>
+
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+
+  </div>
+
+</nav>
