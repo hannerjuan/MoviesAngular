@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieModel } from '../../../../models/parameters/movie.model';
+import { MovieService } from '../../../../services/parameters/movie.service';
+
+declare const showMessage: any;
 
 @Component({
   selector: 'app-movie-list',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+  recordList: MovieModel[];
+  
+  constructor(private service: MovieService) { }
 
   ngOnInit(): void {
+    this.service.getAllRecords().subscribe(
+      data => {
+        this.recordList = data;
+        console.log(this.recordList);
+      },
+      error => {
+        showMessage(error, 'There was an error with backend communication');
+      }
+    );
   }
 
 }
