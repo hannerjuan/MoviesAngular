@@ -11,6 +11,7 @@ declare const showMessage: any;
 })
 export class MovieListComponent implements OnInit {
 
+  
   recordList: MovieModel[];
   
   constructor(private service: MovieService) { }
